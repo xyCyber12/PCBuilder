@@ -1,11 +1,203 @@
 <!DOCTYPE html>
+
+
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: #222222;
+            color: #FFF4B7;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #222222;
+            color: #FFF4B7;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.1s;
+        }
+        button:hover {
+            background-color: #FFF4B7;
+            color: #222222;
+            transform: scale(1.1);
+        }
+        .nav_bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            margin-bottom: 20px;
+            background-color: black;
+            border-radius: 12px;
+        }
+        .nav_button{
+            display: flex;
+            gap: 10px;
+        }
+        .logo{
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF4B7;
+        }
+
+        .CPUs, .GPUs, .RAM{
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px 0 5px 0;
+        }
+        .main-cont{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            max-width: 90%;
+            margin: 0 auto;
+            gap: 25px;
+        }
+
+       .PartPicker h3,.build-cart h3{
+            margin-top: 0;
+            border-bottom: 2px solid white;
+            padding-bottom: 15px;
+       }
+       .PartPicker h4{
+            margin-bottom: 5px;
+            margin-top: 0px;
+       }
+       .PartPicker{
+            width: 65%;
+            padding: 25px;
+            background-color: black;
+            border-radius: 12px;
+            border-top:5px solid #2F3032;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            
+       }
+       .build-cart{
+            width: 35%;
+            background-color: black;
+            padding: 25px;
+            border-top:5px solid #2F3032;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+       }
+       .cart-items p {
+            font-size: 16px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between; 
+        }
+        .total-price {
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px dashed #cccccc;
+            text-align: right;
+            color: #FFF4B7;
+        }
+        
+    </style>
 </head>
-<body>
+<body> 
+    <!-- Navigation Bar -->
+    <nav class = "nav_bar">
+        <div class = "logo">
+            PC Builder
+        </div> 
+        <div class = "nav_buttons">
+            <button class = "login">Login</button>
+            <button class = "register">Register</button>
+        </div>
+    </nav>
+
+    <!-- Part Picker -->
+    <div class="main-cont">
+        <aside class="PartPicker">
+            <h3>Available Parts:</h3>
+            <div>
+                <section class="CPUs">
+                    <h4>CPU</h4>
+                    <div class="Parts">
+                        <input type="radio" name="cpu_choice" id="amd-cpu" value = "200" data-name="Ryzen 5">
+                        <label for="amd-cpu">AMD Ryzen 5 ($200)</label><br>
+                        <input type="radio" name="cpu_choice" id="intel" value = "200" data-name="Core i5">
+                        <label for="intel">Intel Core i5 ($200)</label>
+                    </div>
+                </section>
+                <section class="GPUs">
+                    <h4>GPU</h4>
+                    <div class="Parts">
+                        <input type="radio" name="gpu_choice" id="amd-gpu" value="500" data-name="Radeon">
+                        <label for="amd-gpu">AMD Radeon 7900 XT ($500)</label><br>
+                        <input type="radio" name="gpu_choice" id="nvidia" value="800" data-name="RTX">
+                        <label for="nvidia">NVIDIA RTX 3080 ($800)</label>
+                    </div>
+                </section>
+                <section class="RAM">
+                    <h4>RAM</h4>
+                    <div class="Parts">
+                        <input type="radio" name="ram_choice" id="corsair" value="20000000" data-name="vengeance">
+                        <label for="corsair">Corsair Vengeance 8GB DDR4 ($20000000)</label><br>
+                        <input type="radio" name="ram_choice" id="gskill" value="12345" data-name="trident">
+                        <label for="gskill">G.Skill Trident 32GB DDR5 ($12345)</label>
+                    </div>
+                </section>
+            </div>
+        </aside>
+    <aside class="build-cart">
+        <h3>Current Build</h3>
+        
+        <div class="cart-items">
+            <p><strong>CPU:</strong> <span id = "choose-cpu">---</span></p>
+            <p><strong>GPU:</strong> <span id = "choose-gpu">---</span></p>
+            <p><strong>RAM:</strong> <span id = "choose-ram">---</span></p>
+        </div>
+
+        <h2 class="total-price">Total: $<span id = "total">0.00</span></h2>
+    </aside>
+    </div>
     
+    <script>
+        function updatePrice() {
+            let tongTien = 0;
+            
+            let chooseCPU = document.querySelector('input[name="cpu_choice"]:checked');
+            if (chooseCPU) {
+                tongTien += Number(chooseCPU.value);
+                document.getElementById('choose-cpu').innerText = chooseCPU.dataset.name;
+            }
+            
+            let chooseGPU = document.querySelector('input[name="gpu_choice"]:checked');
+            if (chooseGPU) {
+                tongTien += Number(chooseGPU.value);
+                document.getElementById('choose-gpu').innerText = chooseGPU.dataset.name;
+            }
+            
+            let chooseRAM = document.querySelector('input[name="ram_choice"]:checked');
+            if (chooseRAM) {
+                tongTien += Number(chooseRAM.value);
+                document.getElementById('choose-ram').innerText = chooseRAM.dataset.name;
+            }
+
+            document.getElementById('total').innerText = tongTien.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        
+        let chooseRadio = document.querySelectorAll('input[type="radio"]');
+        for (let button of chooseRadio) {
+            button.addEventListener('change', updatePrice);
+        }
+
+    </script>
 </body>
 </html>
