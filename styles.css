@@ -1,0 +1,122 @@
+body{
+    background-color: #222222;
+    color: #FFF4B7;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+button{
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #222222;
+    color: #FFF4B7;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.1s;
+}
+button:hover {
+    border: 2px solid #FFF4B7;
+    color: #FFF4B7;
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    background-color: black;
+    border-radius: 12px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF4B7;
+}
+
+.CPUs, .GPUs, .RAM, .Motherboard,.Storage, .PSU, .CPU-Cooler,.Case{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+}
+.main-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 25px;
+}
+
+.PartPicker h3,.build-cart h3{
+    margin-top: 0;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+}
+.PartPicker h4{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.PartPicker{
+    width: 65%;
+    padding: 25px;
+    background-color: black;
+    border-radius: 12px;
+    border-top:5px solid #2F3032;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    
+}
+.build-cart{
+    width: 35%;
+    background-color: black;
+    padding: 25px;
+    border-top:5px solid #2F3032;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+.cart-items p {
+    font-size: 16px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between; 
+}
+.total-price {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px dashed #cccccc;
+    text-align: right;
+    color: #FFF4B7;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    width: 75%;
+    padding: 15px;
+    background-color: #222222;
+    color: #FFF4B7;
+    border-radius: 12px;
+    position: relative;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.17em;
+}
