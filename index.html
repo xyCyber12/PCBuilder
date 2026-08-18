@@ -23,8 +23,48 @@
                     <button class="openBtn"><h4>+ CPU</h4></button>
                     <div  class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>CPU choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>CPU</h2>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Series</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 5" class="cpu-filter">Core Ultra 5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core i5" class="cpu-filter">Core i5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core i7" class="cpu-filter">Core i7</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Ryzen 3" class="cpu-filter">Ryzen 3</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Ryzen 5" class="cpu-filter">Ryzen 5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Ryzen 7" class="cpu-filter">Ryzen 7</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Socket</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="AM4" class="cpu-filter">AM4</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="AM5" class="cpu-filter">AM5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="LGA 1700" class="cpu-filter">LGA 1700</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="LGA 1851" class="cpu-filter">LGA 1851</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button id="selected-text" class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -32,8 +72,10 @@
                     <button class="openBtn"><h4>+ GPU</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>GPU choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>GPU</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -41,8 +83,10 @@
                     <button class="openBtn"><h4>+ RAM</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>RAM choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>RAM</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -50,8 +94,10 @@
                     <button class="openBtn"><h4>+ Motherboard</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>Motherboard choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>Motherboard</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -59,8 +105,10 @@
                     <button class="openBtn"><h4>+ Storage</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>Storage choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>Storage</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -68,8 +116,10 @@
                     <button class="openBtn"><h4>+ PSU</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>PSU choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>PSU</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -77,8 +127,10 @@
                     <button class="openBtn"><h4>+ CPU Cooler</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>CPU Cooler choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>CPU Cooler</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
@@ -86,8 +138,10 @@
                     <button class="openBtn"><h4>+ Case</h4></button>
                     <div class="popup">
                         <div class="popup-content">
-                            <button class="closeBtn">✕</button>
-                            <h2>Case choices</h2>
+                            <div class="header-menu">
+                                <button class="closeBtn">✕</button>
+                                <h2>Case</h2>
+                            </div> 
                         </div>
                     </div>
                 </section>
