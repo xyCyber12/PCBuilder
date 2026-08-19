@@ -24,20 +24,27 @@
                     <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>CPU</h2>
+                                <button class="closeBtn">✕</button>
                             </div>   
                             <div class="filter-module"> 
                                 <div class="filter-row">
                                     <div class="filter-dropdown">
                                         <button class="filter-pill dropdown-btn">Series</button>
                                         <div class="dropdown-content">
-                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 5" class="cpu-filter">Core Ultra 5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core i3" class="cpu-filter">Core i3</label>
                                             <label class="dropdown-item"><input type="checkbox" value="Core i5" class="cpu-filter">Core i5</label>
                                             <label class="dropdown-item"><input type="checkbox" value="Core i7" class="cpu-filter">Core i7</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core i9" class="cpu-filter">Core i9</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 3" class="cpu-filter">Core Ultra 3</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 5" class="cpu-filter">Core Ultra 5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 7" class="cpu-filter">Core Ultra 7</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Core Ultra 9" class="cpu-filter">Core Ultra 9</label>
                                             <label class="dropdown-item"><input type="checkbox" value="Ryzen 3" class="cpu-filter">Ryzen 3</label>
                                             <label class="dropdown-item"><input type="checkbox" value="Ryzen 5" class="cpu-filter">Ryzen 5</label>
                                             <label class="dropdown-item"><input type="checkbox" value="Ryzen 7" class="cpu-filter">Ryzen 7</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Ryzen 9" class="cpu-filter">Ryzen 9</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Ryzen th" class="cpu-filter">Ryzen THREADRIPPER</label>
                                         </div>
                                     </div>
                                     <div class="filter-dropdown">
@@ -56,7 +63,7 @@
                                 <div class="search-row"> 
                                     <input type="text" class="search-bar" placeholder="Search for parts..."> 
                                     <div class="select-price-sorting">
-                                        <button id="selected-text" class="select-button">Default ▼</button>
+                                        <button class="select-button">Default ▼</button>
                                         <div class="options">
                                             <div class="option-item" data-value="default">Default</div>
                                             <div class="option-item" data-value="asc">Ascending</div>
@@ -65,83 +72,337 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="parts-list" data-category="cpu"></div>
                         </div>
                     </div>
                 </section>
                 <section class="GPUs">
                     <button class="openBtn"><h4>+ GPU</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>GPU</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">VRAM</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="4 GB" class="gpu-filter">4 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="8 GB" class="gpu-filter">8 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="12 GB" class="gpu-filter">12 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="16 GB" class="gpu-filter">16 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="24 GB" class="gpu-filter">24 GB</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Chipset</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="GTX 1650" class="gpu-filter">GTX 1650</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RTX 3060" class="gpu-filter">RTX 3060</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RTX 4070Ti" class="gpu-filter">RTX 4070Ti</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RTX 4090" class="gpu-filter">RTX 4090</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RTX 5070" class="gpu-filter">RTX 5070</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RTX 5070Ti" class="gpu-filter">RTX 5070Ti</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RX6500 XT" class="gpu-filter">RX6500 XT</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="RX6600" class="gpu-filter">RX6600</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="gpu"></div>
                         </div>
                     </div>
                 </section>
                 <section class="RAM">
                     <button class="openBtn"><h4>+ RAM</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>RAM</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Capacity</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="8 GB (1 x 8 GB)" class="ram-filter">8 GB (1 x 8 GB)</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="16 GB (1 x 16 GB)" class="ram-filter">16 GB (1 x 16 GB)</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="16 GB (2 x 8 GB)" class="ram-filter">16 GB (2 x 8 GB)</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="32 GB (2 x 16 GB)" class="ram-filter">32 GB (2 x 16 GB)</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">RAM Type</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="DDR4" class="ram-filter">DDR4</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="DDR5" class="ram-filter">DDR5</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="ram"></div>
                         </div>
                     </div>
                 </section>
                 <section class="Motherboard">
                     <button class="openBtn"><h4>+ Motherboard</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>Motherboard</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Socket</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="AM4" class="motherboard-filter">AM4</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="AM5" class="motherboard-filter">AM5</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="LGA 1700" class="motherboard-filter">LGA 1700</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="LGA 1851" class="motherboard-filter">LGA 1851</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel LGA 20xx" class="motherboard-filter">Intel LGA 20xx</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Chipset</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="AMD A450" class="motherboard-filter">AMD A450</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="AMD X870" class="motherboard-filter">AMD X870</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel B660" class="motherboard-filter">Intel B660</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel B760" class="motherboard-filter">Intel B760</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel H610" class="motherboard-filter">Intel H610</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel X299 (LGA 2066)" class="motherboard-filter">Intel X299 (LGA 2066)</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel Z790" class="motherboard-filter">Intel Z790</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Intel Z890" class="motherboard-filter">Intel Z890</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="motherboard"></div>
                         </div>
                     </div>
                 </section>
                 <section class="Storage">
                     <button class="openBtn"><h4>+ Storage</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>Storage</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Type</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="HDD" class="storage-filter">HDD</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="SSD" class="storage-filter">SSD</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Capacity</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="128 GB" class="storage-filter">128 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="256 GB" class="storage-filter">256 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="512 GB" class="storage-filter">512 GB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="1 TB" class="storage-filter">1 TB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="2 TB" class="storage-filter">2 TB</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="4 TB" class="storage-filter">4 TB</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="storage"></div>
                         </div>
                     </div>
                 </section>
                 <section class="PSU">
                     <button class="openBtn"><h4>+ PSU</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>PSU</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Brand</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="Cooler Master" class="psu-filter">Cooler Master</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Corsair" class="psu-filter">Corsair</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="FSP" class="psu-filter">FSP</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="GIGABYTE" class="psu-filter">GIGABYTE</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Gamdias" class="psu-filter">Gamdias</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Jetek" class="psu-filter">Jetek</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="psu"></div>
                         </div>
                     </div>
                 </section>
                 <section class="CPU-Cooler">
                     <button class="openBtn"><h4>+ CPU Cooler</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>CPU Cooler</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Brand</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="Cooler Master" class="cpu-cooler-filter">Cooler Master</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Corsair" class="cpu-cooler-filter">Corsair</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="ASUS" class="cpu-cooler-filter">ASUS</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Arctic" class="cpu-cooler-filter">Arctic</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Deepcool" class="cpu-cooler-filter">Deepcool</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Jonsbo" class="cpu-cooler-filter">Jonsbo</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="MSI" class="cpu-cooler-filter">MSI</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="cpu-cooler"></div>
                         </div>
                     </div>
                 </section>
                 <section class="Case">
                     <button class="openBtn"><h4>+ Case</h4></button>
-                    <div class="popup">
+                    <div  class="popup">
                         <div class="popup-content">
                             <div class="header-menu">
-                                <button class="closeBtn">✕</button>
                                 <h2>Case</h2>
-                            </div> 
+                                <button class="closeBtn">✕</button>
+                            </div>   
+                            <div class="filter-module"> 
+                                <div class="filter-row">
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Brand</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="Cooler Master" class="case-filter">Cooler Master</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Corsair" class="case-filter">Corsair</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="E-Dra" class="case-filter">E-Dra</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="HYTE" class="case-filter">HYTE</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="MSI" class="case-filter">MSI</label>
+                                            <label class="dropdown-item"><input type="checkbox" value="Jetek" class="case-filter">Jetek</label>
+                                        </div>
+                                    </div>
+                                    <div class="filter-dropdown">
+                                        <button class="filter-pill dropdown-btn">Motherboard Compatibility</button>
+                                        <div class="dropdown-content">
+                                            <label class="dropdown-item"><input type="checkbox" value="ATX" class="case-filter">ATX</label>
+                                        </div>
+                                    </div>
+                                    <input type="text" class="filter-pill price-input" placeholder="Min Price">
+                                    <input type="text" class="filter-pill price-input" placeholder="Max Price">
+                                    <button class="clear-filterBtn">Clear</button>
+                                </div>
+                                <div class="search-row"> 
+                                    <input type="text" class="search-bar" placeholder="Search for parts..."> 
+                                    <div class="select-price-sorting">
+                                        <button class="select-button">Default ▼</button>
+                                        <div class="options">
+                                            <div class="option-item" data-value="default">Default</div>
+                                            <div class="option-item" data-value="asc">Ascending</div>
+                                            <div class="option-item" data-value="desc">Descending</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="parts-list" data-category="case"></div>
                         </div>
                     </div>
                 </section>
