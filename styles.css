@@ -102,7 +102,7 @@ button:hover {
 
 .popup-content{
     width: 75%;
-    max-height: 75%;
+    height: 75%;
     color: #FFF4B7;
     border-radius: 12px;
     position: absolute;
@@ -115,7 +115,6 @@ button:hover {
 }
 
 .closeBtn {
-    position: absolute;
     background-color: #111111;
     right: 15px;
     width: 30px;
@@ -124,7 +123,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    line-height: 0.9;
+    line-height: 1;
 }
 
 .header-menu{
@@ -132,16 +131,20 @@ button:hover {
     padding: 15px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.header-menu h2 {
+    margin: 0;
 }
 
 .filter-module{
     padding: 15px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
     background-color: #222222;
 }
+
 .filter-row{
     display: flex;
     gap: 10px;
@@ -169,16 +172,20 @@ button:hover {
 .dropdown-content{
     display: none;
     position: absolute;
+    max-height: 325px;
     top: 120%;
     left: 0;
     background-color: #111111;
     border: 1px solid #444444;
     border-radius: 8px;
     padding: 12px;
-    min-width: 160px;
+    min-width:max-content;
+    box-sizing: border-box;
     z-index: 1000;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 12px;
+    
 }
 .dropdown-content.show {
     display: flex;
@@ -189,7 +196,7 @@ button:hover {
     gap: 10px;
     font-size: 15px;
     color: #cccccc;
-    cursor: center;
+    cursor: pointer;
     user-select: none;
 }
 .dropdown-item input[type="checkbox"]{
@@ -250,4 +257,9 @@ button:hover {
 
 .options.open {
     display:block;
+}
+
+.parts-list {
+    padding: 15px;
+    background-color: #222222;
 }
