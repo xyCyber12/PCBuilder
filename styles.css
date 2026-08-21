@@ -42,8 +42,8 @@ button:hover {
 }
 .main-cont{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     max-width: 90%;
     margin: 0 auto;
     gap: 25px;
@@ -59,16 +59,15 @@ button:hover {
     margin-top: 0px;
 }
 .PartPicker{
-    width: 65%;
+    width: 80%;
     padding: 25px;
     background-color: black;
     border-radius: 12px;
     border-top:5px solid #2F3032;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-    
 }
 .build-cart{
-    width: 35%;
+    width: 80%;
     background-color: black;
     padding: 25px;
     border-top:5px solid #2F3032;
@@ -79,7 +78,7 @@ button:hover {
     font-size: 16px;
     margin: 15px 0;
     display: flex;
-    justify-content: space-between; 
+    align-items: flex-end;
 }
 .total-price {
     margin-top: 25px;
@@ -101,12 +100,30 @@ button:hover {
 }
 
 .popup-content{
-    width: 75%;
-    height: 75%;
+    width: 80%;
+    height: 85%;
     color: #FFF4B7;
     border-radius: 12px;
     position: absolute;
     margin: 0 auto;
+    overflow-y: auto;
+}
+
+.popup-content::-webkit-scrollbar{
+    width:8px;
+}
+
+.popup-content::-webkit-scrollbar-track{
+    background:#1a1a1a;
+}
+
+.popup-content::-webkit-scrollbar-thumb{
+    background:#555;
+    border-radius:10px;
+}
+
+.popup-content::-webkit-scrollbar-thumb:hover{
+    background:#777;
 }
 
 .popup-content h2{
@@ -239,7 +256,7 @@ button:hover {
     background-color: #222222;
     border: 2px solid #555555;
     border-radius: 8px;
-    z-index: 999;
+    z-index: 9999;
     overflow: hidden;
 }
 
@@ -262,4 +279,53 @@ button:hover {
 .parts-list {
     padding: 15px;
     background-color: #222222;
+}
+
+.component-item{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    border:1px solid rgba(255, 244, 183, 0.5);
+    border-radius:12px;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+.image-item{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.name-item{
+    margin: 0;
+}
+
+.image-slot{
+    width:140px;
+    height:140px;
+    flex-shrink:0;
+}
+
+.info-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p{
+        margin: 0;
+    }
+}
+
+.part-left{
+    flex-shrink: 0;
+}
+.part-right{
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.space{
+    flex-grow: 1;
+    margin: 0 10px 10px 10px;
+    border-bottom: 2px dashed #555;
 }

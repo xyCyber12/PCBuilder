@@ -1,35 +1,3 @@
-function updatePrice() {
-  let tongTien = 0;
-
-  let chooseCPU = document.querySelector('input[name="cpu_choice"]:checked');
-  if (chooseCPU) {
-    tongTien += Number(chooseCPU.value);
-    document.getElementById("choose-cpu").innerText = chooseCPU.dataset.name;
-  }
-
-  let chooseGPU = document.querySelector('input[name="gpu_choice"]:checked');
-  if (chooseGPU) {
-    tongTien += Number(chooseGPU.value);
-    document.getElementById("choose-gpu").innerText = chooseGPU.dataset.name;
-  }
-
-  let chooseRAM = document.querySelector('input[name="ram_choice"]:checked');
-  if (chooseRAM) {
-    tongTien += Number(chooseRAM.value);
-    document.getElementById("choose-ram").innerText = chooseRAM.dataset.name;
-  }
-
-  document.getElementById("total").innerText = tongTien.toLocaleString(
-    undefined,
-    { minimumFractionDigits: 2, maximumFractionDigits: 2 },
-  );
-}
-
-let chooseRadio = document.querySelectorAll('input[type="radio"]');
-for (let button of chooseRadio) {
-  button.addEventListener("change", updatePrice);
-}
-
 const sections = document.querySelectorAll(".PartPicker section");
 
 sections.forEach((section) => {
@@ -117,6 +85,7 @@ const parts = [
     price: 199,
     series: "Ryzen 5",
     socket: "AM5",
+    image: "images/r5-7600.jpg",
   },
   {
     id: 2,
@@ -318,7 +287,7 @@ const totalPrice = {
   motherboard: 0,
   storage: 0,
   psu: 0,
-  cpucooler: 0,
+  "cpu-cooler": 0,
   case: 0
 }
 
@@ -330,16 +299,68 @@ function updateTotalPrice(){
   document.getElementById("total").textContent = tongTien.toFixed(2);
 }
 
-const cpuList = document.querySelector('.parts-list[data-category="cpu"]');
+const specFields = {
+  cpu: ["series", "socket"],
+  gpu: ["chipset", "vram"],
+  ram: ["capacity", "type"],
+  motherboard: ["socket", "chipset"],
+  storage: ["type", "capacity"],
+  psu: ["brand", "wattage"],
+  "cpu-cooler": ["brand"],
+  case: ["brand", "motherboardSize"],
+};
+
 for (const part of parts){
-    if (part.category==="cpu"){
-      const partItem = document.createElement("div");
-      partItem.textContent = `${part.name}-----$${part.price}`;
-      cpuList.appendChild(partItem);
-      partItem.addEventListener("click",()=>{
-        document.getElementById("choose-cpu").textContent = part.name;
-        totalPrice.cpu = part.price;
-        updateTotalPrice();
-      })
+  const partList = document.querySelector(`.parts-list[data-category="${part.category}"]`);
+  if (partList){
+    const partItem = document.createElement("div");
+    const imageItem = document.createElement("img");
+    const nameItem = document.createElement("p");
+    const priceItem = document.createElement("p");
+    const imageSlot = document.createElement("div");
+    const infoItem = document.createElement("div");
+    const specsItem = document.createElement("p");
+    imageSlot.classList.add("image-slot");
+    if (part.image){
+      imageSlot.appendChild(imageItem);
+      imageItem.src=part.image;
+      imageItem.classList.add("image-item");
     }
+    const tempSpecs = specFields[part.category];
+    let tempString = "";
+    for (let i = 0; i < tempSpecs.length; i++) {
+      tempString+=part[tempSpecs[i]];
+
+      if (i !== tempSpecs.length - 1) {
+        tempString += " · ";
+      }
+    }
+    specsItem.textContent=tempString;
+    infoItem.classList.add("info-item");
+    partItem.prepend(imageSlot);
+    nameItem.textContent=part.name;
+    priceItem.textContent = `$${part.price}`;
+    priceItem.classList.add("price-item");
+    nameItem.classList.add("name-item");
+    partItem.classList.add("component-item");
+    specsItem.classList.add("specs-item");
+    infoItem.appendChild(nameItem);
+    infoItem.appendChild(specsItem);
+    infoItem.appendChild(priceItem);
+    partItem.appendChild(infoItem);
+    partList.appendChild(partItem);
+    partItem.addEventListener("click",()=>{
+      const cartSlot = document.getElementById(`choose-${part.category}`);
+      if (cartSlot) {
+        cartSlot.textContent = part.name;
+      }
+      const priceSlot = document.getElementById(`price-${part.category}`);
+      if (priceSlot) {
+        priceSlot.textContent = `$${part.price}`;
+      }
+      totalPrice[part.category] = part.price;
+      updateTotalPrice();
+    })
+  }
 }
+
