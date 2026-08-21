@@ -15,8 +15,8 @@
         </div> 
     </nav>
 
-    <div class="main-cont">
-        <aside class="PartPicker">
+    <section class="main-cont">
+        <div class="PartPicker">
             <h3>Available Parts:</h3>
             <div>
                 <section class="CPUs">
@@ -407,24 +407,55 @@
                     </div>
                 </section>
             </div>
-        </aside>
-    <aside class="build-cart">
-        <h3>Current Build</h3>
-        
+        </div>
+    <section class="build-cart">
+        <h3>Current Build</h3>    
         <div class="cart-items">
-            <p><strong>CPU:</strong> <span id = "choose-cpu">---</span></p>
-            <p><strong>GPU:</strong> <span id = "choose-gpu">---</span></p>
-            <p><strong>RAM:</strong> <span id = "choose-ram">---</span></p>
-            <p><strong>Motherboard:</strong> <span id = "choose-motherboard">---</span></p>
-            <p><strong>Storage:</strong> <span id = "choose-storage">---</span></p>
-            <p><strong>PSU:</strong> <span id = "choose-psu">---</span></p>
-            <p><strong>CPU Cooler:</strong> <span id = "choose-cpu-cooler">---</span></p>
-            <p><strong>Case:</strong> <span id = "choose-case">---</span></p>
+            <p>
+                <span class="part-left"><strong>CPU:</strong> <span id="choose-cpu"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-cpu"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>GPU:</strong> <span id="choose-gpu"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-gpu"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>RAM:</strong> <span id="choose-ram"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-ram"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>Motherboard:</strong> <span id="choose-motherboard"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-motherboard"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>Storage:</strong> <span id="choose-storage"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-storage"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>PSU:</strong> <span id="choose-psu"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-psu"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>CPU Cooler:</strong> <span id="choose-cpu-cooler"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-cpu-cooler"></span>
+            </p>
+            <p>
+                <span class="part-left"><strong>Case:</strong> <span id="choose-case"></span></span>
+                <span class="space"></span>
+                <span class="part-right" id="price-case"></span>
+            </p>
         </div>
 
         <h2 class="total-price">Total: $<span id = "total">0.00</span></h2>
-    </aside>
-    </div>
+    </section>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
